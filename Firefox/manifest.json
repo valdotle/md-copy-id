@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Copy Mangadex IDs",
+    "version": "0.0.1",
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "copy-md-id@valdotle.dev"
+        }
+    },
+
+    "description": "Adds a shortcut to copy the ID of a hovered resoure",
+
+    "icons": {
+        "64": "icons/icon_64x64.png"
+    },
+
+    "action": {
+        "default_icon": {
+            "64": "icons/icon_64x64.png"
+        }
+    },
+
+    "commands": {
+        "copy-id": {
+            "suggested_key": {
+                "default": "Alt+M"
+            },
+            "description": "Copy hovered resource ID (if applicable)"
+        }
+    },
+
+    "permissions": ["tabs"],
+
+    "background": {
+        "scripts": ["worker.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.mangadex.org/*", "*://*.mangadex.dev/*"],
+            "js": ["content-script.js"]
+        }
+    ]
+}
