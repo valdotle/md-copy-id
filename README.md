@@ -5,4 +5,6 @@ To install on:
 * Firefox: go to the extension manager, select "install add-on from file" and upload the .xpi file from the Firefox folder
 * other browser: I haven't bothered with those, feel free to create a compatible version and make a PR for it though 
 
-**The default shortcut is Alt+M.** To change it, navigate to extensions > (keyboard) shortcuts and change the shortcut for the "Copy hovered resource ID" command. Keep in mind that overwriting your browser's default shortcut may result in unexpected behavior (or the shortcut not working at all). 
+**The default shortcut is Alt+M.** To change it, navigate to extensions > (keyboard) shortcuts and change the shortcut for the "Copy hovered resource ID" command. Keep in mind that overwriting your browser's default shortcut may result in unexpected behavior (or the shortcut not working at all).
+
+If it doesn't work after installation, try to refresh the (Mangadex) tab to make sure the content script gets injected into the page.
